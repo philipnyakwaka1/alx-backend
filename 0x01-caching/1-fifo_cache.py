@@ -19,7 +19,7 @@ class FIFOCache(BaseCaching):
             keys_list = sorted(list(self.cache_data.keys()))
             if len(keys_list) > self.MAX_ITEMS:
                 del self.cache_data[keys_list[0]]
-                print(f'DISCARDED: {keys_list[0]}')
+                print(f'DISCARD: {keys_list[0]}')
 
     def get(self, key: Any) -> Union[None, Any]:
         """Get item by key"""

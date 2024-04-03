@@ -21,16 +21,13 @@ class LIFOCache(BaseCaching):
             if len(keys_list) > self.MAX_ITEMS:
                 if self.last_item_key is None:
                     del self.cache_data[keys_list[-1]]
-                    print(f'DISCARDED: {keys_list[-2]}')
+                    print(f'DISCARD: {keys_list[-2]}')
                 else:
                     idx = keys_list.index(self.last_item_key)
                     del self.cache_data[keys_list[idx]]
-                    print(f'DISCARDED: {keys_list[idx]}')
+                    print(f'DISCARD: {keys_list[idx]}')
             self.last_item_key = key
 
     def get(self, key: Any) -> Union[None, Any]:
         """Get item by key"""
-        val = self.cache_data.get(key)
-        if key is None or val is None:
-            return None
-        return val
+        return self.cache_data.get(key)
