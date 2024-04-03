@@ -30,4 +30,7 @@ class LIFOCache(BaseCaching):
 
     def get(self, key: Any) -> Union[None, Any]:
         """Get item by key"""
-        return self.cache_data.get(key)
+        val = self.cache_data.get(key)
+        if key is None or val is None:
+            return None
+        return val
