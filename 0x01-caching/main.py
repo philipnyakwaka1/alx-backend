@@ -1,3 +1,4 @@
-d = {'name': 'Philip', 'age': 50}
-del d['name']
-print(list(d.keys()))
+#!/usr/bin/env python3
+
+l = [1, 2, 3, 4]
+print(l.index(5))
