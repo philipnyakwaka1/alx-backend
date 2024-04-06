@@ -61,7 +61,7 @@ class LRUCache(BaseCaching):
                     self.tail = node
                     self.length += 1
 
-                if self.length > self.MAX_ITEMS:
+                if self.length >= self.MAX_ITEMS:
                     del self.cache_data[self.head.key]
                     print(f'DISCARD: {self.head.key}')
                     del self.hash[self.head.key]
