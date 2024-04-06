@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
 
-l = [1, 2, 3, 4]
-print(l.index(5))
+class Test:
+    pass
+
+a = [1, 0]
+key1 = a
+key2 = a
+del key2
+print(key1)
