@@ -28,7 +28,7 @@ def get_locale():
 @app.route('/')
 def home_page() -> str:
     """renders index.html"""
-    return render_template('3-index.html',
+    return render_template('4-index.html',
                            home_title=_("Welcome to Holberton"),
                            home_header=_("Hello world!"))
 
