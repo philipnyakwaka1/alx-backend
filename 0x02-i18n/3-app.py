@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Module for home page"""
+
 from flask import Flask, render_template, request
 from flask_babel import Babel, _
 app = Flask(__name__)
